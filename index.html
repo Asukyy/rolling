@@ -1,16 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- css -->
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <title>Roll</title>
 </head>
 <body>
+<div class="container">
+    <header class="logo">
+        <img src="img/logo.png" alt="logo">
+    </header>
+    <div class="main">
+        <h3 class="text" id="textnone">Ajoutez plusieurs éléments à tirer au sort, vous pourrez ensuite les inclures ou vous voulez </h3>
 
-    
+    <div class="search">
+        <input type="text" class="searchbar" id="search" placeholder="Ajouter un élément">
+        <button id="add" onclick="randomForm()">+</button>
+    </div>
+
+    <!-- supprimez tout -->
+    <p id="deleteall" onclick="deleteAll()"><u>Supprimer tout</u></p>
+
+    <div id="tirage">
+
+        <script>
+
+            function randomForm() {
+                var search = document.getElementById("search").value;
+               var div = document.getElementById("tirage").innerHTML += "<div class='value'>" + "<p class='tontext'>" + search + "<span class='delete' onclick=deleteForm()>" + "X" + "<span>" + "</p>" + "</div>";
+                document.getElementById("deleteall").style.display = "block";
+                document.getElementById("search").value = "";
+
+                if(search == "") {
+                    alert("Veuillez entrer un élément");
+                    document.getElementById("tirage").innerHTML = "";
+                    document.getElementById("deleteall").style.display = "none";
+                }
+                document.body.appendChild(div);
+     
+            }
+
+            function draw(){
+
+                document.getElementById("random").style.display = "none";
+                document.getElementById("search").style.display = "none";
+                document.getElementById("textnone").style.display = "none";
+                document.getElementById("add").style.display = "none";
+
+                var elements = document.getElementsByClassName("tontext");
+                var random = Math.floor(Math.random() * elements.length);
+                var element = elements[random].innerHTML;
+                var div = document.getElementById("tirage").innerHTML = "<div class='value'>" + "<p class='tontext'>" + element + "</p>" + "</div>";
+                document.body.appendChild(div);
+
+
+            }
+
+            function deleteAll() {
+                var deleteall = document.getElementById("tirage").innerHTML = "";
+                document.getElementById("deleteall").style.display = "none";
+                document.body.appendChild(deleteall);
+            }
+
+            function deleteForm() {
+                var div = document.getElementById("tirage");
+                div.removeChild(div.lastChild);
+                if(div.childElementCount == 0){
+                    document.getElementById("deleteall").style.display = "none";
+                }
+            }
+        </script>
+    </div>
+
+    <div class="random">
+        <button id="random" onclick="draw()">Tirer au sort</button>
+    </div>
+
+    <footer class="footer">
+        <p>© 2021 - Tous droits réservés</p>
+    </footer>
+</div>
+
     
 <script src="js/script.js"></script>
 </body>
