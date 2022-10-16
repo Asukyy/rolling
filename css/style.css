@@ -5,8 +5,13 @@ body{
     background-color:#FC6849;
     color:#fff;
     text-align:center;
-    padding:25px;
 
+}
+
+.logo img{
+
+    width:125px;
+    border-radius:50%;
 }
 
 .main{
