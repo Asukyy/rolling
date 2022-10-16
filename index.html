@@ -52,14 +52,26 @@
                 document.getElementById("deleteall").style.display = "none";
                 document.getElementById("add").style.display = "none";
 
-                var back = document.getElementById("tirage").innerHTML ="<div id='idback'>" + "<button class = 'back' onclick= back()>" + "Retour" + "</button>" + "<button class = 'back' onclick= back()>" + "Recommencer" + "</button>" + "</div>"
-                document.body.appendChild(back);
+                if(document.getElementsByClassName("value").length < 2) {
+                    alert("Il faut au moins 2 éléments pour tirer au sort, veuillez recommencer");
+                    document.getElementById("random").style.display = "block";
+                    document.getElementById("search").style.display = "block";
+                    document.getElementById("deleteall").style.display = "none";
+                    document.getElementById("textnone").style.display = "block";
+                    document.getElementById("add").style.display = "block";
+                    document.getElementById("tirage").innerHTML = "";
+                    document.getElementsByClassName("hide").style.display ="none"
+                } 
+                else {
+                    var random = document.getElementsByClassName("value")[Math.floor(Math.random() * document.getElementsByClassName("value").length)];
+                    random.classList.add("hide");
+                    document.getElementById("tirage").appendChild(random);
+                    document.getElementById("random").style.display = "block";
+                }
 
-                var elements = document.getElementsByClassName("tontext");
-                var random = Math.floor(Math.random() * elements.length);
-                var element = elements[random].innerHTML;
-                var div = document.getElementById("tirage").innerHTML = "<div class='value'>" + "<p class='tontext'>" + element + "</p>" + "</div>";
-                document.body.appendChild(div);
+                var back = document.getElementById("tirage").innerHTML ="<div id='idback' class='hide'>" + "<button class = 'back' onclick= back()>" + "Retour" + "</button>" + "<button class = 'back' onclick= back()>" + "Recommencer" + "</button>" + "</div>"
+                document.body.appendChild(back);
+                
             }
 
             function deleteAll() {
