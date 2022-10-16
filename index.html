@@ -32,9 +32,11 @@
 
                 <script>
 
+                    var h = 1;
+
                     function randomForm() {
                         var search = document.getElementById("search").value;
-                        var div = document.getElementById("tirage").innerHTML += "<div class='value'>" + "<p class='tontext'>" + search + "<span class='delete' onclick=deleteForm()>" + "X" + "<span>" + "</p>" + "</div>";
+                        var div = document.getElementById("tirage").innerHTML += "<div class='value'>" + "<div class='withoutx' >" + "<p class='tontext'>" + search + "</div>" + "<span class='delete' onclick=deleteForm()>" + "X" + "<span>" + "</p>" + "</div>";
                         document.getElementById("deleteall").style.display = "block";
                         document.getElementById("search").value = "";
 
@@ -64,22 +66,20 @@
                             document.getElementById("tirage").innerHTML = "";
                             document.getElementsByClassName("hide").style.display = "none"
                         }
-                        else {
-                            var random = document.getElementsByClassName("value")[Math.floor(Math.random() * document.getElementsByClassName("value").length)];
-                            random.classList.add("hide");
-                            document.getElementById("tirage").appendChild(random);
-                            document.getElementById("random").style.display = "block";
-                        }
 
-                        var back = document.getElementById("tirage").innerHTML = "<div id='idback' class='hide'>" + "<button class = 'back' onclick= back()>" + "Retour" + "</button>" + "<button class = 'back' onclick= back()>" + "Recommencer" + "</button>" + "</div>"
+                        var random = document.getElementsByClassName("withoutx");
+                        var random = random[Math.floor(Math.random() * random.length)];
+                        var random = random.innerHTML;
+                        var random = document.getElementById("tirage").innerHTML = "<div class='contain'>" + "<div class='result'>" + random + "</div>" + "<div id='idback' class='hide'>" + "<button class = 'back' onclick= back()>" + "Retour" + "</button>"  + "</div>" + "</div>";
+                        document.body.appendChild(random);
                         document.body.appendChild(back);
 
                     }
 
                     function deleteAll() {
-                        var deleteall = document.getElementById("tirage").innerHTML = "";
+                        document.getElementById("tirage").innerHTML = "";
                         document.getElementById("deleteall").style.display = "none";
-                        document.body.appendChild(deleteall);
+
                     }
 
                     function deleteForm() {
@@ -90,14 +90,26 @@
                         }
                     }
 
+                    function enleve(){
+
+                    }
+
                     function back() {
                         document.getElementById("random").style.display = "block";
                         document.getElementById("search").style.display = "block";
                         document.getElementById("textnone").style.display = "block";
                         document.getElementById("add").style.display = "block";
-
                         document.getElementById("idback").style.display = "none";
+                        document.getElementById("tirage").innerHTML = "";
+                    }
 
+                    function reload() {
+
+
+
+                    }
+
+                    function board() {
 
                     }
                 </script>

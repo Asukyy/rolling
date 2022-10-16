@@ -83,6 +83,7 @@ body{
 .value{
     background-color:#FC6849;
     color:#fff;
+    display:flex;
     padding:15px;
     border:0;
     border-radius:5px;
@@ -123,7 +124,7 @@ body{
 
 .delete{
     color:#fff;
-    margin-left:30px;
+    margin:18px 0 0 30px;
     cursor: pointer;
 }
 
@@ -139,10 +140,29 @@ body{
     color : red;
 }
 
+.result {
+    background-color:#FC6849;
+    color:#fff;
+    padding:15px;
+    border:0;
+    border-radius:5px;
+    margin-left:1vh;
+}
+.contain{
+    text-align: center;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 footer{
     background-color:#FC6849;
+    width: 100%;
     color:#fff;
     text-align:center;
     padding:25px;
+    position: absolute;
+    bottom: 0;
     
 }
