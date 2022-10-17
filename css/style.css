@@ -1,159 +1,161 @@
-body{
-    margin:0;
-}
-.logo{
-    background-color:#FC6849;
-    color:#fff;
-    text-align:center;
-
+body {
+    margin: 0;
 }
 
-.logo img{
+.logo {
+    background-color: #FC6849;
+    color: #fff;
+    text-align: center;
 
-    width:125px;
-    border-radius:50%;
 }
 
-.main{
-    width:100%;
+.logo img {
+
+    width: 125px;
+    border-radius: 50%;
 }
 
-.main h3{
-    text-align:center;
-    padding:15px;
+.main {
+    width: 100%;
+}
+
+.main h3 {
+    text-align: center;
+    padding: 15px;
     font-family: 'Montserrat', sans-serif;
 }
 
-.search{
-    background-color:#fff;
-    width:100%;
-    padding:25px;
+.search {
+    background-color: #fff;
+    width: 100%;
+    padding: 25px;
     display: flex;
     justify-content: center;
 }
 
-.searchbar
-{
-    width:50%;
-    padding:10px;
-    border:1px solid #ccc;
-    border-radius:5px;
+.searchbar {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-#add{
-    background-color:#FC6849;
-    color:#fff;
-    padding:15px;
-    border:0;
-    border-radius:5px;
-    margin-left:1vh;
+#add {
+    background-color: #FC6849;
+    color: #fff;
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 1vh;
     cursor: pointer;
 }
 
-#add:active{
-    background-color:#863b2c;
+#add:active {
+    background-color: #863b2c;
 }
 
 
-.random{
-    background-color:#fff;
-    width:100%;
-    padding:25px;
+.random {
+    background-color: #fff;
+    width: 100%;
+    padding: 25px;
     display: flex;
     justify-content: center;
 }
 
-#random
-{
-    background-color:#FC6849;
-    color:#fff;
-    padding:20px;
-    border:0;
-    border-radius:5px;
-    margin-left:1vh;
+#random {
+    background-color: #FC6849;
+    color: #fff;
+    padding: 20px;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 1vh;
     cursor: pointer;
 }
 
-#random:active{
-    background-color:#863b2c;
+#random:active {
+    background-color: #863b2c;
 }
 
-#tirage{
-    background-color:#fff;
+#tirage {
+    background-color: #fff;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
+    
 }
 
-.value{
-    background-color:#FC6849;
-    color:#fff;
-    display:flex;
-    padding:15px;
-    border:0;
-    border-radius:5px;
-    margin-left:1vh;
+.value {
+    background-color: #FC6849;
+    color: #fff;
+    margin: 5px;
+    display: flex;
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
 }
 
-.back{
-    background-color:#FC6849;
-    color:#fff;
-    padding:15px;
-    border:0;
-    border-radius:5px;
-    margin-left:1vh;
+.back {
+    background-color: #FC6849;
+    color: #fff;
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 1vh;
     cursor: pointer;
 }
 
-.back:active{
-    background-color:#863b2c;
+.back:active {
+    background-color: #863b2c;
 }
 
-.recommencer{
-    background-color:#FC6849;
-    color:#fff;
-    padding:15px;
-    border:0;
-    border-radius:5px;
-    margin-left:1vh;
+.recommencer {
+    background-color: #FC6849;
+    color: #fff;
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 1vh;
     cursor: pointer;
 }
 
-#idback{
-    padding:2vh
+#idback {
+    padding: 2vh
 }
 
-.recommencer:active{
-    background-color:#863b2c;
+.recommencer:active {
+    background-color: #863b2c;
 }
 
-.delete{
-    color:#fff;
-    margin:18px 0 0 30px;
+.delete {
+    color: #fff;
+    margin: 18px 0 0 30px;
     cursor: pointer;
 }
 
-.delete:hover{
-    color:#964333;
+.delete:hover {
+    color: #964333;
 }
 
-#deleteall{
-    margin-left:30px;
+#deleteall {
+    margin-left: 30px;
     cursor: pointer;
     text-align: center;
-    display:none;
-    color : red;
+    display: none;
+    color: red;
 }
 
 .result {
-    background-color:#FC6849;
-    color:#fff;
-    padding:15px;
-    border:0;
-    border-radius:5px;
-    margin-left:1vh;
+    background-color: #FC6849;
+    color: #fff;
+    padding: 15px;
+    border: 0;
+    border-radius: 5px;
+    margin-left: 1vh;
 }
-.contain{
+
+.contain {
     text-align: center;
     font-size: 16px;
     display: flex;
@@ -161,13 +163,13 @@ body{
     justify-content: center;
 }
 
-footer{
-    background-color:#FC6849;
+footer {
+    background-color: #FC6849;
     width: 100%;
-    color:#fff;
-    text-align:center;
-    padding:25px;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
     position: absolute;
     bottom: 0;
-    
+
 }
